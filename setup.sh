@@ -14,5 +14,3 @@ mklink .vimrc
 mklink .nvimrc
 mklink .ideavimrc
 mklink init.vim $HOME/.config/nvim
-mklink vim_bash
-
