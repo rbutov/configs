@@ -1,0 +1,19 @@
+"vim shared config, based on https://github.com/ikenox/dotfiles/blob/master/vim/vimrc.keymap
+
+"   <leader> "," used in Ideavim
+let mapleader = ","
+
+" show line numbers
+set number
+set relativenumber
+
+" proper search
+set incsearch
+set ignorecase
+set smartcase
+set hlsearch
+
+" indenting
+set autoindent
+set smartindent
+

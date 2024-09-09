@@ -1,0 +1,4 @@
+#!/bin/sh
+shopt -s expand_aliases  
+alias ll='ls -la'
+alias fd='fdfind'

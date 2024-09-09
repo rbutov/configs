@@ -1,0 +1,83 @@
+"Ideavim config, based on https://github.com/ikenox/dotfiles/blob/master/intellij/ideavimrc
+
+source ~/.vimrc.shared
+
+set clipboard=unnamed,autoselect
+set clipboard+=ideaput
+
+" enable surround http://www.futurile.net/2016/03/19/vim-surround-plugin-tutorial/
+set surround
+set ideajoin
+
+nnoremap ,a :<C-u>action GotoAction<CR>
+vnoremap ,a :<C-u>action GotoAction<CR>
+nnoremap ,t :<C-u>action GotoClass<CR>
+vnoremap ,t :<C-u>action GotoClass<CR>
+
+
+nnoremap ,e :<C-u>action SearchEverywhere<CR>
+nnoremap ,s :<C-u>action FileStructurePopup<CR>
+nnoremap ,g :<C-u>action FindInPath<CR>
+nnoremap ,u :<C-u>action FindUsages<CR>
+
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gi :<C-u>action GotoImplementation<CR>
+nnoremap gf :<C-u>action GotoFile<CR>
+
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+
+"TODO review if want to loose R in IDEA
+nnoremap R :<C-u>action RenameElement<CR>
+vnoremap ,v :<C-u>action IntroduceVariable<CR>
+nnoremap ,v :<C-u>action IntroduceVariable<CR>
+nnoremap ,n :<C-u>action Inline<CR>
+
+nnoremap gh :<C-u>action Back<CR>
+nnoremap gl :<C-u>action Forward<CR>
+
+inoremap <C-n> <C-o>:<C-u>action InsertLiveTemplate<CR>
+nnoremap <C-I> :<C-u>action QuickJavaDoc<CR>
+
+nnoremap ,p :<C-u>action PasteMultiple<CR>
+
+nnoremap == :<C-u>action ReformatCode<CR>
+vnoremap == :<C-u>action ReformatCode<CR>
+
+nnoremap cc :<C-u>action CommentByLineComment<CR>
+vnoremap cc :<C-u>action CommentByLineComment<CR>
+
+nnoremap Q :<C-u>action ShowErrorDescription<CR>
+nnoremap q :<C-u>action ShowIntentionActions<CR>
+
+nnoremap ,f :<C-u>action AceAction<CR>
+vnoremap ,f :<C-u>action AceAction<CR>
+
+nnoremap ,r :<C-u>action RecentFiles<CR>
+nnoremap gt :<C-u>action GotoTest<CR>
+
+nnoremap ,j :<C-u>action MethodDown<CR>
+nnoremap ,k :<c-u>action MethodUp<CR>
+
+vnoremap H :<C-u>action EditorSelectWord<CR>
+vnoremap L :<c-u>action EditorUnSelectWord<CR>
+nnoremap ,l :<C-u>action GotoNextError<CR>
+nnoremap ,h :<C-u>action GotoPreviousError<CR>
+
+nnoremap ,c :<C-u>action RunClass<CR>
+vnoremap ,c :<C-u>action RunClass<CR>
+
+" Alt mapping to match nix to send Esc
+inoremap <A-h> <Esc><h>
+inoremap <A-j> <Esc><j>
+inoremap <A-k> <Esc><k>
+inoremap <A-l> <Esc><l>
+inoremap <A-f> <Esc><f>
+inoremap <A-S-f> <Esc><S-f>
+inoremap <A-w> <Esc><w>
+inoremap <A-b> <Esc><b>
+inoremap <A-S-a> <Esc><S-a>
+inoremap <A-S-i> <Esc><S-i>
+inoremap <A-u> <Esc><u>
+inoremap <A-p> <Esc><p>
+
